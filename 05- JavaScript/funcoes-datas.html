@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+
+<body>
+
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+    <button><a href="Eventos/01_eventos.html">Eventos</a></button>
+    <script>
+        var data = new Date();
+
+        console.log(data.toLocaleDateString());
+        data.setDate(data.getDate() - 10);
+        console.log(data.toLocaleDateString());
+
+        var data1 = new Date();
+        var data2 = new Date(2015, 0, 05);
+        var x = data1.getTime() - data2.getTime()
+        console.log(x);
+
+        /* 1 dia em milissegundos*/ console.log(1000 * 60 * 60 * 24);
+
+        console.log(x / (1000 * 60 * 60 * 24));
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

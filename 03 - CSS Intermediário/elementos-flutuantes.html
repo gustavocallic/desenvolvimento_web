@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #principal {
+            border: 2px solid violet;
+            background: yellow;
+        }
+
+        .conteudo {
+            background: gray;
+            border: 2px solid red;
+            width: 100px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        .conteudoFloat {
+            background: gray;
+            border: 2px solid rgb(76, 0, 255);
+            width: 100px;
+            height: 50px;
+            float: left;
+            margin: 10px;
+        }
+
+        .clearFloat {
+            clear: both;
+            /* essa propriedade serve para empurrar o texto ou os outros elementos para a linha de baixo dos elementos flutuantes, sem ela o layout fica bugado */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <div class="conteudoFloat">
+            Conteudo 1
+        </div>
+        <div class="conteudoFloat">
+            Conteudo 22
+        </div>
+        <div class="conteudoFloat">
+            Conteudo 3
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque, beatae magnam voluptates eos minus nam
+            consequatur cupiditate! Natus, ipsum iste illo voluptatum aut vitae quam eveniet culpa unde maxime?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque, beatae magnam voluptates eos minus nam
+            consequatur cupiditate! Natus, ipsum iste illo voluptatum aut vitae quam eveniet culpa unde maxime?
+        </p>
+        <div style="border:2px solid green; background: red; height: 100px;"> testando o Float</div>
+
+
+        <p class="clearFloat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae non maxime
+            distinctio animi sapiente fugit cum? Facilis fuga quisquam minima vitae reprehenderit incidunt, nemo
+            obcaecati iure quos quaerat cum quam!</p>
+        <div class="clearFloat"></div><!-- Todo o elemento que for adicionado a baixo da propriedade clear já automáticamente aumenta o tamanho da div PRINCIPAL, o que não acontece caso nao exista esta propriedade -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quaerat quisquam voluptas, rerum debitis at,
+            provident ad iusto error necessitatibus maxime odio modi officia eius aperiam molestias magni voluptatum
+            optio.</p>
+    </div>
+    <a href="elementos-flutuantes-pratica.html">Clique Aqui</a>
+</body>
+
+</html>

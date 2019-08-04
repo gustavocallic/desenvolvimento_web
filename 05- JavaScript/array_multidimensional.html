@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="txtItem" type="text">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="ordenar()">Ordenar</button>
+
+    <script>
+        //COMEÇO EXERCÍCIOS
+        var lstItens = ['Cadeira', 'Impressora', 'Garfo'];
+        function adicionar() {
+            var lstItensAux = [];
+            lstItens.forEach(element => {
+                element = especialCharMask(element);
+                console.log(element);
+                lstItensAux.push(element.toLowerCase().replace(/[\.-]/g, ""))
+            });
+            
+
+            var txtItem = document.getElementById('txtItem').value;
+            txtItem = especialCharMask(txtItem)
+            console.log('Aqui' + txtItem);
+            if (!txtItem) {
+                alert('Insira um valor válido');
+            }
+            else if (lstItensAux.includes(txtItem.toLowerCase())) {
+                alert('O item já existe')
+            } else {
+                var words = txtItem.toLowerCase().split(" ");
+                for (var a = 0; a < words.length; a++) {
+                    var w = words[a];
+                    words[a] = w[0].toUpperCase() + w.slice(1);
+                }
+                words[0] = especialCharMask(words[0]);
+                lstItens.push(words[0]);
+                lstItens.sort();
+                document.getElementById('txtItem').value = '';
+                console.log(lstItens);
+
+            }
+        }
+
+        function especialCharMask(especialChar){
+            var arrayString = especialChar.split();
+            arrayString.forEach(element => {
+                console.log('Entrou ' + element);
+                if (element.match(/[Ááàãâä]/)) {
+                    especialChar = element.replace(element, 'a')
+                    console.log('Entrou xd'+ especialChar);
+                }
+            });
+            especialChar = especialChar.replace('/[Ááàãâä]/ui', 'a');
+            especialChar = especialChar.replace('/[éèêë]/ui', 'e');
+            especialChar = especialChar.replace('/[íìîï]/ui', 'i');
+            especialChar = especialChar.replace('/[óòõôö]/ui', 'o');
+            especialChar = especialChar.replace('/[úùûü]/ui', 'u');
+            especialChar = especialChar.replace('/[ç]/ui', 'c');
+            especialChar = especialChar.replace('/[^a-z0-9]/i', '_');
+            especialChar = especialChar.replace('/_+/', '_'); //
+            console.log('Oi '+especialChar);
+            
+            return especialChar;
+        }
+
+        var lstNumero = [1, 36, 8, 96, 45, 32];
+        var lstOne = [];
+        var lstTwo = ['Gustavo', 'Callic', 'Da', 'Silva', 'De', 'Miranda'];
+        var lstTres = ['Gustavo', 'Callic', 'Da', 'Silva', 'De', 'Miranda'];
+        //Incluir elemento no final do array => .push(elemento);
+        lstOne.push(lstTwo);
+        //Incluir elemento no inicio do array => .unshift(elemento)
+        lstOne.unshift(lstTres);
+        console.log(lstOne);
+        document.write(lstOne[0][3]);
+        document.write('<br />')
+        lstOne.forEach(element => {
+            document.write(element)
+        });
+
+        //Pesquisa retornando o Index do item
+        console.log(lstOne[0].indexOf('Da'));
+
+        //Ordenação ascendente alfanumérica
+        console.log(lstOne[0].sort());
+
+        //Ordenação numérica com sort
+        console.log(lstNumero.sort((a, b) => {
+            return a - b;
+        }));
+
+
+
+        //para EXCLUSÃO nao é necessário passar nada por parâmetro  
+        //Exclusão no final => .pop();
+        //Exclusão no início => .shift();
+    </script>
+</body>
+
+</html>

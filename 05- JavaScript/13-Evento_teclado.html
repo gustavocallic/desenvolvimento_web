@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Eventos teclado</title>
+</head>
+
+<body>
+    <h1>Documenteção: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">w3schools</a></h1>
+    <h1>onkeydown</h1>
+    <p>Quando a tecla é pressionada</p>
+    <input onkeydown="acao()" type="text">
+
+    <h1>onkeypress</h1>
+    <p>Quando a tecla é matida pressionada (este evento só ocorre em teclas que possuem caracteres, um exemplo de tecla
+        que nao possui um caractere é o control</p>
+    <input onkeypress="acao()" type="text">
+
+    <h1>onkeyup</h1>
+    <p>Quando a tecla é liberada</p>
+    <input onkeyup="acao()" type="text">
+
+    <a href="14-eventos_janela.html">Eventos de Janela</a>
+    
+    <script>
+        
+
+        function acao() {
+                alert('Disparou')
+            }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

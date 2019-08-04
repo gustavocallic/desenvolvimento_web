@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    |
+    <a href="unes.html">UNES</a>
+    <h2>Login</h2>
+    <form action="">
+        <label for="">Login</label>
+        <input type="text" name="login">
+        <br>
+        <br>
+        <label for="">Senha</label>
+        <input type="password" name="senha">
+        <!--name é um atributo para recuperar dados-->
+        <br>
+        <br>
+        <input type="submit" value="Logar" style="margin-left: 165px">
+    </form>
+    <h2>Cadastra-se</h2>
+    <form action="">
+        <label for="">Login</label>
+        <input type="text">
+        <br><br>
+
+        <label for="">Sexo</label><br>
+        <input type="radio" name="sexo" value="m">Masculino <br>
+        <input type="radio" name="sexo" value="f">Feminino <br>
+        <br><br>
+
+        <label for="">Interesses</label>
+        <input type="checkbox" name="interesses">Jogos
+        <input type="checkbox" name="interesses">Programação
+        <input type="checkbox" name="interesses">Filmes
+        <br><br>
+
+        <label for="">Estado</label>
+        <select name="estado" id="">
+            <option value="sp">SP</option>
+            <option value="pr">PR</option>
+            <option value="mg">MG</option>
+        </select><br>
+
+        <label for="">Observações:</label> <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Cadastrar"><!--input do tipo submit só é possível dentro de formulários-->
+    </form>
+</body>
+
+</html>

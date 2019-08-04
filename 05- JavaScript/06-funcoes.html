@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <a href="07-escopoVariaveis.html">Clique Aqui</a>
+    <a href="08-funcoes_callback.html">Funções Callback</a>
+
+    <h3> Aula 172 - Básico de funções </h3>
+    <script>
+        var comprimento = 50;
+        var largura = 10;
+        function calcularArea(comprimento, largura) {
+            return comprimento * largura;
+        };
+        var a = calcularArea(comprimento, largura);
+        console.log(a);
+        document.write(a);
+    </script>
+<hr>
+    <h3> Aula 173 - Flexibilidade dos parâmetros em JS </h3>
+    <script>
+        function soma(a, b) {
+            return a + b;
+        }
+
+        document.write(soma(15, 20)+ '<br/>');
+        
+        document.write(soma(15, 20, 30) + '<br/>'); //O que ele faz aqui é ignorar o 30, e diferentemente de outras linguagens como o C#, a aplicação nao crasha.
+
+        document.write(soma(15) + '<br/>');//Neste Caso o retorno será um not a number;
+    </script>
+<hr>
+    <h3>Aula 175 - Funções anônimas com Wrapper</h3>
+    <script>
+        var a = function(nome){
+            document.write('Bem vindo ' + nome);
+        }
+        a('Gustavo');
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

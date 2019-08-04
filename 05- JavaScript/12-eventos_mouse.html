@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <h1>onmouseout</h1>
+    <p onmouseout="acao('MouseOut')" style="background: #ccc; display: inline;">Serve para disparar uma ação no momento em que o mouse deixa a area do elemento</p>
+
+    <h1>onmouseover</h1>
+    <p onmouseover="acao('MouseOver')" style="background: #ccc; display: inline;">Dispara a ação quando o mouse sobrepoe o elemento</p>
+    <a href="13-Evento_teclado.html">Eventos Teclado</a>
+
+    <script>
+        function acao(funcao){
+            alert('função disparada por '+ funcao)
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

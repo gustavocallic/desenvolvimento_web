@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="manipulando_estilos.html">Clique aqui</a>
+    <br>
+    <input type="text" placeholder="Digite um caracter aqui" onkeyup="distribuirCaracter(this)">
+    <hr>
+    <span>Letras</span>
+    <input type="text" id="letras" disabled>
+    <span>Números</span>
+    <input type="number" id="numero" disabled>
+
+    <script>
+        function distribuirCaracter(valor) {
+            if (valor.value >= 0 || valor.value <= 99999999999999) { 
+                document.getElementById('numero').value = valor.value + document.getElementById('numero').value;
+                valor.value = '';
+            }
+            else {
+                document.getElementById('letras').value = valor.value + document.getElementById('letras').value;
+                valor.value = '';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

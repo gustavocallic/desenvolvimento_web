@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Finger's</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="content">
+            <h1>Inicio</h1>
+            <p>Comece a rolar</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Passo 1</h1>
+            <p>Comece a rolar</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Passo 2</h1>
+            <p>Comece a rolar</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Passo 3</h1>
+            <p>Comece a rolar</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Passo 4</h1>
+            <p>Comece a rolar</p>
+        </div>
+    </section>
+
+    <div id="set-height"></div>
+
+    <video id="v0" tabindex="0" , autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="fingers.mp4">
+    </video>
+    <script src="./js/jquery.js"> </script> 
+    
+    <script>
+        var frameNumber = 0, // start video at frame 0
+            // lower numbers = faster playback
+            playbackConst = 1075,
+            // get page height from video duration
+            setHeight = document.getElementById("set-height"),
+            // select video element         
+            vid = document.getElementById('v0');
+        // var vid = $('#v0')[0]; // jquery option
+
+        // dynamically set the page height according to video length
+        vid.addEventListener('loadedmetadata', function () {
+            setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+        });
+
+        var elemento = document.getElementsByTagName('section');
+        console.log(elemento);
+
+
+
+        // Use requestAnimationFrame for smooth playback
+        function scrollPlay() {
+            var frameNumber = window.pageYOffset / playbackConst;
+            vid.currentTime = frameNumber;
+            window.requestAnimationFrame(scrollPlay);
+            // console.log(frameNumber);
+            // console.log(window.pageYOffset);
+
+        }
+
+        window.requestAnimationFrame(scrollPlay);
+    </script>
+</body>
+
+</html>

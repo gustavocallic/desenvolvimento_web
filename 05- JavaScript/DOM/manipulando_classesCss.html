@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    
+    <input type="text" onfocus="this.style.backgroundColor = 'red'" onblur="this.style.backgroundColor = 'yellow'" onkeyup="verificaTamanho(this)">
+
+
+    <button class="estilo1" onclick="alteraClasse(this)">Clique aqui</button>
+
+    <script>
+        function alteraClasse(valor){
+            if (valor.className == 'estilo1') {
+                valor.className = 'estilo2'
+            }else{
+                valor.className = 'estilo1'
+            }   
+        }
+
+        function verificaTamanho(elemento){
+            console.log(elemento)
+            if (elemento.value.length < 3) {
+                elemento.style.backgroundColor = '#fff';
+            }else{
+                elemento.style.backgroundColor = '#3f96bb';
+            }
+            console.log(elemento.value.length);
+        }
+        
+    </script>
+</body> 
+</html>

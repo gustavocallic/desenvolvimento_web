@@ -1,0 +1,7 @@
+DOCUMENTAÇÃO - https://www.w3schools.com/js/default.asp (Menu à esquerda da página)
+
+BOM - Browser Object Model
+É uma API que permite o acesso via JavaScript aos recursos do BROWSER, como cookies, troca de url, leitura de url e diversos outros
+
+
+aula 01 - Window => Janela do Browser; Documentação https://www.w3schools.com/jsref/obj_window.asp

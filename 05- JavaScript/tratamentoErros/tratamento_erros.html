@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var video = Array();
+        video[1] = Array();
+        video[1]['nome'] = 'Gladiador'
+        video[1]['categoria'] = 'Guerra'
+        //Neste primeiro log nao existe um erro, apenas um comportamento inesperado, pq a posição [0] nao foi definida, e por se tratar de comportamento a aplicação continua executando normalmente
+        console.log(video[0]);
+        //Porem neste segundo log o erro ocorre, e quando um erro ocorre a aplicação deixa de funcionar
+
+
+        //console.log(video[0]['nome']) //COMENTEI PARA CONTINUAR O SCRIPT E ENTRAR NO TRY / CATCH
+
+
+        //Como o segundo log contém um erro, a aplicação nao executa o terceiro log
+        console.log(video[1]['categoria'])
+
+        //Tratando o erro
+        try {
+            console.log(video[0]['nome'])
+        } catch (error) {
+            console.log(error);
+            throw error;//Lançar a excessão, ele para com a aplicação o que nao se torna meio que contra-mão com o tratamento de erros para aplicações reativas
+        }finally{
+            console.log('Sempre passa por aqui, indiferentemente de pegar ou nao o erro =]');
+        }
+
+        console.log('A aplicação nao morreu');
+        
+    </script>
+
+</body>
+
+</html>

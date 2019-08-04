@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cliqueMe(this)">cliqueMe</button>
+    <p>SetTimeOut('ação', 'tempo em milisegundos') - Executa a ação uma vez após o tempo informado</p>
+    <p>SetInterval('ação', 'tempo em milisegundos') - Sempre executa a ação após o tempo informado</p>
+    <script>
+        function cliqueMe() {
+            console.log(document.getElementsByTagName('body'));
+            var div = document.createElement('div');
+            setTimeout(function () {
+                div.style.width = '500px';
+                div.style.height = '500px';
+                div.style.backgroundColor = 'rgb(128, 128, 128)'
+                div.setAttribute('id', 'divi')
+                document.body.appendChild(div)
+                console.log(document.body);
+            }, 3000)
+            setTimeout(function () {
+                var mudaCor = setInterval(function () {
+                    var r = Math.round(Math.random() * 256);
+                    var g = Math.round(Math.random() * 256);
+                    var b = Math.round(Math.random() * 256);
+                    var rgb = 'rgb(' + r + ', ' + g + ', ' + b + ')'
+                    document.getElementById('divi').style.backgroundColor = rgb;
+                    console.log(document.getElementById('divi'))
+                    
+                    
+                    if (r > 0 || r < 200) {
+                        clearInterval(mudaCor);
+                    }
+                }, 2000)
+            }, 3000)
+
+        }
+    </script>
+</body>
+
+</html>

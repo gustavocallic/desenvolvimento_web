@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(() => {
+            var x = $('#txtNome').on('keyup', () => {
+                console.log(x.val());
+
+            })
+            var y = $('#chkOpcao').on('change', () => {
+                console.log(y.val());
+            })
+
+            $('.sexo').on('change', ()=>{
+                console.log($('.sexo:checked').val())
+            })
+
+            var interesse = $('.interesse');
+            console.log(interesse);
+
+            
+            interesse.on('change', () =>{
+                $.each(interesse, (indice, elemento)=>{
+                    console.log(indice);
+                    
+                }) 
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <label for="txtNome">Nome</label>
+    <input id="txtNome" type="text">
+    <hr>
+    <label for="chkOpcao">Selecione</label>
+    <select name="" id="chkOpcao">
+        <option value="1">Google</option>
+        <option value="2">Rádio</option>
+        <option value="3">Televisão</option>
+    </select>
+    <hr>
+    <input type="radio" name="sexo" class="sexo" value="f"><span>Feminino</span><br>
+    <input type="radio" name="sexo" class="sexo" value="m"> <span>Masculino</span><br>
+
+    <hr>
+    <p>Interesses</p>
+    <div>
+        <input type="checkbox" name="interesses" class="interesse" value="php"><span>PHP</span>
+    </div>
+    <div>
+        <input type="checkbox" name="interesses" class="interesse" value="js"><span>JavaScript</span>
+    </div>
+    <div>
+        <input type="checkbox" name="interesses" class="interesse" value="csharp"><span>C#</span>
+    </div>
+    <div>
+        <input type="checkbox" name="interesses" class="interesse" value="angular"><span>Angular 4</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #e6e6e6;
+
+}
+
+/* 
+***LAYOUT****
+*/
+h1{
+    color: #4e4e44;
+    font-size: 2.5em;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link, :visited{
+    color: white;
+    padding: 8px 15px;
+}
+
+a:hover{
+    background: white;
+    color:  #f7b600;
+    padding: 8px 20px;
+}
+h2{
+    color: #f7b200;
+}
+
+h3{
+    background: #f7b200;
+   color: #4e4e44;
+    padding: 5px;
+}
+#area-cabecalho{
+    background: #f7b600;
+    padding: 15px;
+    text-align: center;
+}
+#area-logo, #area-menu{
+    padding: 15px;
+    
+}
+#area-principal{
+    width: 920px;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+#area-postagem{
+    background: #e6e6e6;
+    float: left;
+    margin-right: 20px;
+    width: 660px;
+    
+}
+#menu-lateral{
+    float: right;
+    width: 240px;
+}
+
+#categoria-lateral{
+    background: white;
+    padding: 5px;
+}
+.rodape{
+    clear: both;
+    text-align: center;
+    font-size: 1.2em;
+    background: white;
+}
+
+.postagem{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+}
+.postagem a{
+    color: #f7b600;
+    padding: none;
+}
+
+.postagem a:hover{
+    text-decoration: underline;
+    background: none;
+    padding: 0;
+} 
+.postagem a:link, :visited{
+    padding: 0;
+}
+.data-postagem{
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f7b200;
+    padding: 2px;
+    display: block;
+}
+.postagem-recente{
+    padding: 5px;
+    margin-bottom: 20px;
+    background: white;
+}
+.postagem-recente a{
+    color: #f7b600;
+    padding: none;
+}
+
+.postagem-recente a:hover{
+    text-decoration: underline;
+    background: none;
+    padding: 0;
+} 
+.postagem-recente a:link, :visited{
+    padding: 0;
+}
+.texto-lateral{
+    font-size: 0.8em;
+    padding: 5px;
+    border-bottom: 1px dotted #f7b200;
+}
+
+#categoria-lateral a{
+    color: #f7b600;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#categoria-lateral a:hover{
+    text-decoration: underline;
+    background: none;
+    padding: 5px;
+} 
+#categoria-lateral a:link, :visited{
+    padding: 0;
+}
+
+
+
+

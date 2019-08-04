@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="manipulando_classesCss.html">Clique aqui</a>
+    <button id="btnVermelho">Vermelho</button>
+    <button id="btnAzul">Azul</button>
+    <button id="btnVerde">Verde</button>
+    <hr>
+    <div id="divCor" style="height: 300px; width: 500px;"></div>
+    <script>
+        var btnVermelho = document.getElementById('btnVermelho');
+        btnVermelho.addEventListener('click', function(){
+            var divCor = document.getElementById('divCor') ;
+            divCor.style.backgroundColor = 'red';
+        })
+    </script>
+</body>
+
+</html>

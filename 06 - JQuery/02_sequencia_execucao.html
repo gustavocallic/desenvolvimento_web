@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <p>O browser lê o arquivo html de cima para baixo, portanto se definimos um bloco script antes de um elemento html, ocorre um erro, visto que a expressão JS foi lida primeiro, para isso o JQuery tem um método que resolve (o JS tbm tem)
+    Veremos agora em prática.
+    </p>
+
+    <script>
+        //simulando o erro, podemos ver no log do chrome um array vazio, lembrando que toda expressao jquery retorna um array.
+        console.log($('.exemploExecucao'))
+        //consertando o erro
+        $(document).ready(function () {
+            console.log($('.exemploExecucao'))
+        });
+        //também podemos fazer assim
+        $(function(){
+            console.log($('.exemploExecucao'))
+        })
+        
+    </script>
+    <div class="exemploExecucao">Esta div vem depois do bloco script</div>
+</body>
+</html>
